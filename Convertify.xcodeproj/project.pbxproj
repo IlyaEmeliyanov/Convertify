@@ -3,18 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09A649C52518FDDF0083F8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A649C42518FDDF0083F8BF /* AppDelegate.swift */; };
+		098D8F9925190489009898BF /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8F9525190489009898BF /* ComingSoonViewController.swift */; };
+		098D8F9A25190489009898BF /* UnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8F9625190489009898BF /* UnitViewController.swift */; };
+		098D8F9B25190489009898BF /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8F9725190489009898BF /* ConverterViewController.swift */; };
+		098D8F9C25190489009898BF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8F9825190489009898BF /* ResultViewController.swift */; };
+		098D8FAA251904B6009898BF /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FA7251904B6009898BF /* Poppins-Bold.ttf */; };
+		098D8FAB251904B6009898BF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FA8251904B6009898BF /* Poppins-Regular.ttf */; };
+		098D8FAC251904B6009898BF /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FA9251904B6009898BF /* Poppins-Medium.ttf */; };
+		098D8FBC251904E1009898BF /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FB5251904E1009898BF /* Unit.swift */; };
+		098D8FBD251904E1009898BF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FB6251904E1009898BF /* Card.swift */; };
+		098D8FBE251904E1009898BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FB7251904E1009898BF /* Extensions.swift */; };
+		098D8FC0251904E2009898BF /* ProMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FB9251904E1009898BF /* ProMeasure.swift */; };
+		098D8FC1251904E2009898BF /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FBA251904E1009898BF /* ConverterBrain.swift */; };
+		098D8FCE251905B5009898BF /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FCD251905B5009898BF /* CurrencyManager.swift */; };
+		098D8FCF251905B5009898BF /* CurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FCC251905B5009898BF /* CurrencyData.swift */; };
+		098D8FDF251905E0009898BF /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FDA251905DF009898BF /* MyTableViewCell.swift */; };
+		098D8FE0251905E0009898BF /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FDB251905DF009898BF /* MyTableViewCell.xib */; };
+		098D8FE1251905E0009898BF /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FDC251905DF009898BF /* MyCollectionViewCell.xib */; };
+		098D8FE2251905E0009898BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098D8FDD251905DF009898BF /* Main.storyboard */; };
+		098D8FE3251905E0009898BF /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FDE251905E0009898BF /* MyCollectionViewCell.swift */; };
+		098D8FEF2519065A009898BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098D8FEE2519065A009898BF /* Constants.swift */; };
 		09A649C72518FDDF0083F8BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A649C62518FDDF0083F8BF /* SceneDelegate.swift */; };
 		09A649C92518FDDF0083F8BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A649C82518FDDF0083F8BF /* ViewController.swift */; };
-		09A649CC2518FDDF0083F8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A649CA2518FDDF0083F8BF /* Main.storyboard */; };
 		09A649CE2518FDDF0083F8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A649CD2518FDDF0083F8BF /* Assets.xcassets */; };
 		09A649D12518FDDF0083F8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A649CF2518FDDF0083F8BF /* LaunchScreen.storyboard */; };
 		09A649DC2518FDDF0083F8BF /* ConvertifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A649DB2518FDDF0083F8BF /* ConvertifyTests.swift */; };
 		09A649E72518FDE00083F8BF /* ConvertifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A649E62518FDE00083F8BF /* ConvertifyUITests.swift */; };
+		09CEFE9425190055003CCDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CEFE8F25190055003CCDAA /* AppDelegate.swift */; };
+		09DE00BF2519011900C14A16 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09DE00BE2519011900C14A16 /* IQKeyboardManagerSwift */; };
+		0BEFDD05D5077A83056AF05C /* Pods_Convertify_ConvertifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F961C00C69B3FC9562A5760 /* Pods_Convertify_ConvertifyUITests.framework */; };
+		6EA2E973E619E8BE6793F7C8 /* Pods_Convertify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A281668214B7C23C5B474D1 /* Pods_Convertify.framework */; };
+		7650942F41D5BC6061BC4552 /* Pods_ConvertifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27BBED63D47998916873F56 /* Pods_ConvertifyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +58,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098D8F9525190489009898BF /* ComingSoonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		098D8F9625190489009898BF /* UnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitViewController.swift; sourceTree = "<group>"; };
+		098D8F9725190489009898BF /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		098D8F9825190489009898BF /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		098D8FA7251904B6009898BF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		098D8FA8251904B6009898BF /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		098D8FA9251904B6009898BF /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		098D8FB5251904E1009898BF /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		098D8FB6251904E1009898BF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		098D8FB7251904E1009898BF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		098D8FB9251904E1009898BF /* ProMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProMeasure.swift; sourceTree = "<group>"; };
+		098D8FBA251904E1009898BF /* ConverterBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterBrain.swift; sourceTree = "<group>"; };
+		098D8FCC251905B5009898BF /* CurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyData.swift; sourceTree = "<group>"; };
+		098D8FCD251905B5009898BF /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
+		098D8FDA251905DF009898BF /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		098D8FDB251905DF009898BF /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		098D8FDC251905DF009898BF /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		098D8FDD251905DF009898BF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		098D8FDE251905E0009898BF /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		098D8FEE2519065A009898BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09A649C12518FDDF0083F8BF /* Convertify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convertify.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		09A649C42518FDDF0083F8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A649C62518FDDF0083F8BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09A649C82518FDDF0083F8BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09A649CB2518FDDF0083F8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09A649CD2518FDDF0083F8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A649D02518FDDF0083F8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09A649D22518FDDF0083F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +90,16 @@
 		09A649E22518FDE00083F8BF /* ConvertifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A649E62518FDE00083F8BF /* ConvertifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertifyUITests.swift; sourceTree = "<group>"; };
 		09A649E82518FDE00083F8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CEFE8F25190055003CCDAA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../Unit Converter/Unit Converter/AppDelegate.swift"; sourceTree = "<group>"; };
+		556B5148B8CD8D1A10561234 /* Pods-ConvertifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertifyTests.debug.xcconfig"; path = "Target Support Files/Pods-ConvertifyTests/Pods-ConvertifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70B605C4F2D6D93DA6879317 /* Pods-Convertify-ConvertifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertify-ConvertifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Convertify-ConvertifyUITests/Pods-Convertify-ConvertifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A281668214B7C23C5B474D1 /* Pods_Convertify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F961C00C69B3FC9562A5760 /* Pods_Convertify_ConvertifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convertify_ConvertifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA9B3DB06CFF79C4F760BAD /* Pods-ConvertifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertifyTests.release.xcconfig"; path = "Target Support Files/Pods-ConvertifyTests/Pods-ConvertifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		B15BC0E58404321CE1683FE7 /* Pods-Convertify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertify.debug.xcconfig"; path = "Target Support Files/Pods-Convertify/Pods-Convertify.debug.xcconfig"; sourceTree = "<group>"; };
+		B27BBED63D47998916873F56 /* Pods_ConvertifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FE3C25BD2EF8EC08C0284C /* Pods-Convertify-ConvertifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertify-ConvertifyUITests.release.xcconfig"; path = "Target Support Files/Pods-Convertify-ConvertifyUITests/Pods-Convertify-ConvertifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC57AC5E8514894917256B05 /* Pods-Convertify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convertify.release.xcconfig"; path = "Target Support Files/Pods-Convertify/Pods-Convertify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA2E973E619E8BE6793F7C8 /* Pods_Convertify.framework in Frameworks */,
+				09DE00BF2519011900C14A16 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7650942F41D5BC6061BC4552 /* Pods_ConvertifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +124,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEFDD05D5077A83056AF05C /* Pods_Convertify_ConvertifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		098D8FA325190493009898BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				098D8F9525190489009898BF /* ComingSoonViewController.swift */,
+				098D8F9725190489009898BF /* ConverterViewController.swift */,
+				098D8F9825190489009898BF /* ResultViewController.swift */,
+				098D8F9625190489009898BF /* UnitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		098D8FB3251904BE009898BF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				098D8FA7251904B6009898BF /* Poppins-Bold.ttf */,
+				098D8FA9251904B6009898BF /* Poppins-Medium.ttf */,
+				098D8FA8251904B6009898BF /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		098D8FC8251904ED009898BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				098D8FB6251904E1009898BF /* Card.swift */,
+				098D8FBA251904E1009898BF /* ConverterBrain.swift */,
+				098D8FD6251905BE009898BF /* Currency */,
+				098D8FB7251904E1009898BF /* Extensions.swift */,
+				098D8FB9251904E1009898BF /* ProMeasure.swift */,
+				098D8FB5251904E1009898BF /* Unit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		098D8FD6251905BE009898BF /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				098D8FCC251905B5009898BF /* CurrencyData.swift */,
+				098D8FCD251905B5009898BF /* CurrencyManager.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		098D8FEA251905F0009898BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				098D8FDD251905DF009898BF /* Main.storyboard */,
+				098D8FDE251905E0009898BF /* MyCollectionViewCell.swift */,
+				098D8FDC251905DF009898BF /* MyCollectionViewCell.xib */,
+				098D8FDA251905DF009898BF /* MyTableViewCell.swift */,
+				098D8FDB251905DF009898BF /* MyTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		09A649B82518FDDF0083F8BF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +193,8 @@
 				09A649DA2518FDDF0083F8BF /* ConvertifyTests */,
 				09A649E52518FDE00083F8BF /* ConvertifyUITests */,
 				09A649C22518FDDF0083F8BF /* Products */,
+				52F000AED8F36CC25D9376E9 /* Pods */,
+				2DC2BEA14611FF1789AE7241 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +211,14 @@
 		09A649C32518FDDF0083F8BF /* Convertify */ = {
 			isa = PBXGroup;
 			children = (
-				09A649C42518FDDF0083F8BF /* AppDelegate.swift */,
+				098D8FEE2519065A009898BF /* Constants.swift */,
+				09CEFE8F25190055003CCDAA /* AppDelegate.swift */,
+				098D8FA325190493009898BF /* Controller */,
+				098D8FB3251904BE009898BF /* Fonts */,
+				098D8FC8251904ED009898BF /* Model */,
+				098D8FEA251905F0009898BF /* View */,
 				09A649C62518FDDF0083F8BF /* SceneDelegate.swift */,
 				09A649C82518FDDF0083F8BF /* ViewController.swift */,
-				09A649CA2518FDDF0083F8BF /* Main.storyboard */,
 				09A649CD2518FDDF0083F8BF /* Assets.xcassets */,
 				09A649CF2518FDDF0083F8BF /* LaunchScreen.storyboard */,
 				09A649D22518FDDF0083F8BF /* Info.plist */,
@@ -128,6 +244,29 @@
 			path = ConvertifyUITests;
 			sourceTree = "<group>";
 		};
+		2DC2BEA14611FF1789AE7241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A281668214B7C23C5B474D1 /* Pods_Convertify.framework */,
+				8F961C00C69B3FC9562A5760 /* Pods_Convertify_ConvertifyUITests.framework */,
+				B27BBED63D47998916873F56 /* Pods_ConvertifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52F000AED8F36CC25D9376E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B15BC0E58404321CE1683FE7 /* Pods-Convertify.debug.xcconfig */,
+				DC57AC5E8514894917256B05 /* Pods-Convertify.release.xcconfig */,
+				70B605C4F2D6D93DA6879317 /* Pods-Convertify-ConvertifyUITests.debug.xcconfig */,
+				C3FE3C25BD2EF8EC08C0284C /* Pods-Convertify-ConvertifyUITests.release.xcconfig */,
+				556B5148B8CD8D1A10561234 /* Pods-ConvertifyTests.debug.xcconfig */,
+				AEA9B3DB06CFF79C4F760BAD /* Pods-ConvertifyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,15 +274,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A649EB2518FDE00083F8BF /* Build configuration list for PBXNativeTarget "Convertify" */;
 			buildPhases = (
+				8FFD7EF27D582605636A9815 /* [CP] Check Pods Manifest.lock */,
 				09A649BD2518FDDF0083F8BF /* Sources */,
 				09A649BE2518FDDF0083F8BF /* Frameworks */,
 				09A649BF2518FDDF0083F8BF /* Resources */,
+				DE2734511D00886505E1385E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Convertify;
+			packageProductDependencies = (
+				09DE00BE2519011900C14A16 /* IQKeyboardManagerSwift */,
+			);
 			productName = Convertify;
 			productReference = 09A649C12518FDDF0083F8BF /* Convertify.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A649EE2518FDE00083F8BF /* Build configuration list for PBXNativeTarget "ConvertifyTests" */;
 			buildPhases = (
+				94E5FD4A4C9729190E2004F2 /* [CP] Check Pods Manifest.lock */,
 				09A649D32518FDDF0083F8BF /* Sources */,
 				09A649D42518FDDF0083F8BF /* Frameworks */,
 				09A649D52518FDDF0083F8BF /* Resources */,
@@ -170,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A649F12518FDE00083F8BF /* Build configuration list for PBXNativeTarget "ConvertifyUITests" */;
 			buildPhases = (
+				5ECD4AAD47E220B9148C1C7A /* [CP] Check Pods Manifest.lock */,
 				09A649DE2518FDE00083F8BF /* Sources */,
 				09A649DF2518FDE00083F8BF /* Frameworks */,
 				09A649E02518FDE00083F8BF /* Resources */,
+				9009074A035D0142AB5E92E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +362,9 @@
 				Base,
 			);
 			mainGroup = 09A649B82518FDDF0083F8BF;
+			packageReferences = (
+				09DE00BD2519011900C14A16 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 09A649C22518FDDF0083F8BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098D8FAA251904B6009898BF /* Poppins-Bold.ttf in Resources */,
+				098D8FAB251904B6009898BF /* Poppins-Regular.ttf in Resources */,
 				09A649D12518FDDF0083F8BF /* LaunchScreen.storyboard in Resources */,
 				09A649CE2518FDDF0083F8BF /* Assets.xcassets in Resources */,
-				09A649CC2518FDDF0083F8BF /* Main.storyboard in Resources */,
+				098D8FAC251904B6009898BF /* Poppins-Medium.ttf in Resources */,
+				098D8FE0251905E0009898BF /* MyTableViewCell.xib in Resources */,
+				098D8FE2251905E0009898BF /* Main.storyboard in Resources */,
+				098D8FE1251905E0009898BF /* MyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +408,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5ECD4AAD47E220B9148C1C7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Convertify-ConvertifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFD7EF27D582605636A9815 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Convertify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9009074A035D0142AB5E92E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Convertify-ConvertifyUITests/Pods-Convertify-ConvertifyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Convertify-ConvertifyUITests/Pods-Convertify-ConvertifyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Convertify-ConvertifyUITests/Pods-Convertify-ConvertifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E5FD4A4C9729190E2004F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConvertifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2734511D00886505E1385E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Convertify/Pods-Convertify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Convertify/Pods-Convertify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Convertify/Pods-Convertify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09A649BD2518FDDF0083F8BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098D8F9925190489009898BF /* ComingSoonViewController.swift in Sources */,
+				09CEFE9425190055003CCDAA /* AppDelegate.swift in Sources */,
+				098D8FCE251905B5009898BF /* CurrencyManager.swift in Sources */,
+				098D8FCF251905B5009898BF /* CurrencyData.swift in Sources */,
+				098D8FBC251904E1009898BF /* Unit.swift in Sources */,
+				098D8F9C25190489009898BF /* ResultViewController.swift in Sources */,
+				098D8F9A25190489009898BF /* UnitViewController.swift in Sources */,
+				098D8FC1251904E2009898BF /* ConverterBrain.swift in Sources */,
+				098D8FDF251905E0009898BF /* MyTableViewCell.swift in Sources */,
 				09A649C92518FDDF0083F8BF /* ViewController.swift in Sources */,
-				09A649C52518FDDF0083F8BF /* AppDelegate.swift in Sources */,
+				098D8FBD251904E1009898BF /* Card.swift in Sources */,
 				09A649C72518FDDF0083F8BF /* SceneDelegate.swift in Sources */,
+				098D8FE3251905E0009898BF /* MyCollectionViewCell.swift in Sources */,
+				098D8FBE251904E1009898BF /* Extensions.swift in Sources */,
+				098D8FC0251904E2009898BF /* ProMeasure.swift in Sources */,
+				098D8F9B25190489009898BF /* ConverterViewController.swift in Sources */,
+				098D8FEF2519065A009898BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +568,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		09A649CA2518FDDF0083F8BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09A649CB2518FDDF0083F8BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		09A649CF2518FDDF0083F8BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,6 +697,7 @@
 		};
 		09A649EC2518FDE00083F8BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B15BC0E58404321CE1683FE7 /* Pods-Convertify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +717,7 @@
 		};
 		09A649ED2518FDE00083F8BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC57AC5E8514894917256B05 /* Pods-Convertify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +737,7 @@
 		};
 		09A649EF2518FDE00083F8BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 556B5148B8CD8D1A10561234 /* Pods-ConvertifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +760,7 @@
 		};
 		09A649F02518FDE00083F8BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA9B3DB06CFF79C4F760BAD /* Pods-ConvertifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +783,7 @@
 		};
 		09A649F22518FDE00083F8BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70B605C4F2D6D93DA6879317 /* Pods-Convertify-ConvertifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +804,7 @@
 		};
 		09A649F32518FDE00083F8BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FE3C25BD2EF8EC08C0284C /* Pods-Convertify-ConvertifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,6 +863,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09DE00BD2519011900C14A16 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09DE00BE2519011900C14A16 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09DE00BD2519011900C14A16 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09A649B92518FDDF0083F8BF /* Project object */;
 }
