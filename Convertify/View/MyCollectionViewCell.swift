@@ -20,7 +20,7 @@ class MyCollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.layer.cornerRadius = 15.0
         
-        setupBackgroundBlur()
+//        setupBackgroundBlur()
     }
     
     
@@ -35,14 +35,14 @@ class MyCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupBackgroundBlur() {
-        let overlayColor = UIColor().fromHexToUIColor("4E4676")
-        let visualEffectView = VisualEffectView(frame: self.bounds)
-
-        // Configure the view with tint color, blur radius, etc
-        visualEffectView.colorTint = overlayColor
-        visualEffectView.colorTintAlpha = 0.1
-        visualEffectView.blurRadius = 3
-
+//        let overlayColor = UIColor().fromHexToUIColor("4E4676")
+//        let visualEffectView = VisualEffectView(frame: self.bounds)
+//
+//        // Configure the view with tint color, blur radius, etc
+//        visualEffectView.colorTint = overlayColor
+//        visualEffectView.colorTintAlpha = 0.8
+//        visualEffectView.blurRadius = 5
+        
 //        This option is obsolete => iOS 14 does the insertionSubview auomatically
 //        self.insertSubview(visualEffectView, at: 0)
     }

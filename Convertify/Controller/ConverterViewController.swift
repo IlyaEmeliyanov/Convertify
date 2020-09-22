@@ -94,68 +94,83 @@ class ConverterViewController: UIViewController {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
-        if textField.text == "" {
-//                SCLAlertView().showError("Error", subTitle: "Input error: you must specify an input value 🤯")
-        }
-        
-        if let dropdownData = unit?.dropdownData, let sourceUnit = leftMenu.selectedItem {
-            // Converting standard measures
+        if let safeUnit = unit, let dropdownData = unit?.dropdownData, let sourceUnit = leftMenu.selectedItem {
             
+            // Converting standard measures
             guard let textFieldValue = textField.text else {
-//                SCLAlertView().showError("Error", subTitle: "You must specify an input value 🤯")
                 return print("Input value cannot be nil")
             }
             
             let targetUnit = rightMenu.selectedItem
             
+            // If unit is standard => then try the standard convertion algorithm by initializing a standardUnit
             if unit is StandardUnit {
-                
-                let standardUnit = unit as! StandardUnit
-                
-                // In all cases replace ',' with '.'
-                let formattedTextFieldValue: String = converterBrain.replaceCharAt(textFieldValue: textFieldValue, replaceChar: ".", charToReplace: ",")
-
-                
-                results = converterBrain.convertToUnit(value: Float(formattedTextFieldValue) ?? 0, unitsRelations: standardUnit.unitsRelations, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?", baseUnit: dropdownData[0])
-                
-                performSegue(withIdentifier: K.segueIdToResult, sender: self)
-            } else {
-                let proUnit = unit as! ProUnit
-                switch proUnit.unitLabel {
-                case K.proUnitLabels[0]:
-                    print(proUnit.unitLabel)
-                    results = converterBrain.colorsConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit)
+                results = calculateStandard(safeUnit, textFieldValue, dropdownData, sourceUnit, targetUnit)
+                self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
+            }
+            // If unit is not standard => then try the pro convertion algorithm by initializing a proUnit
+            else {
+                if let results = calculatePro(safeUnit, textFieldValue, sourceUnit, targetUnit) {
+                    print("'results' is not nil")
                     self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
-                case K.proUnitLabels[1]:
-                    results = converterBrain.binaryConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?")
-                    self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
-                case K.proUnitLabels[2]:
-                    converterBrain.currencyConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?") { (results, error) in
-                        if let err = error {
-                            print(err)
-                            return
-                        }
-                        print(results)
-                        self.results = results
-                        DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
-                        }
-                    }
-                default:
-                    print("Other units...")
                 }
             }
         }
-        
-        
     }
+    
+    // Function for calculating standard units convertions
+    func calculateStandard(_ unit: Unit, _ textFieldValue: String, _ dropdownData: [String], _ sourceUnit: String, _ targetUnit: String?) -> [String]{
+        let standardUnit = unit as! StandardUnit
+        
+        // In all cases replace ',' with '.'
+        let formattedTextFieldValue: String = converterBrain.replaceCharAt(textFieldValue: textFieldValue, replaceChar: ".", charToReplace: ",")
+
+        // Here happens the convertion itself and the result is an array of [String]
+        let results = converterBrain.convertToUnit(value: Float(formattedTextFieldValue) ?? 0, unitsRelations: standardUnit.unitsRelations, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?", baseUnit: dropdownData[0])
+        
+        return results
+    }
+    
+    func calculatePro(_ unit: Unit, _ textFieldValue: String, _ sourceUnit: String, _ targetUnit: String?) -> [String]? {
+        let proUnit = unit as! ProUnit
+        
+        var results: [String]?
+        
+        // Verify what is the unit
+        switch proUnit.unitLabel {
+        case K.proUnitLabels[0]:
+            results = converterBrain.colorsConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit)
+            print(results)
+        case K.proUnitLabels[1]:
+            results = converterBrain.binaryConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?")
+        case K.proUnitLabels[2]:
+            converterBrain.currencyConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?") { (results, error) in
+                if let err = error {
+                    print(err)
+                    return
+                }
+                
+                self.results = results
+                
+                // Escape from closure and from main thread performSegue
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
+                }
+            }
+        default:
+            print("Other units...")
+        }
+        self.results = results
+        
+        return results
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.segueIdToResult {
             let destinationVC = segue.destination as! ResultViewController
             if let safeResults = results {
-                print("Here result is equal to nil")
                 destinationVC.results = safeResults
             }
             destinationVC.sourceUnit = sourceUnitLabel.text

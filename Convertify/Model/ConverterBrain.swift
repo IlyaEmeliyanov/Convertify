@@ -48,22 +48,28 @@ struct ConverterBrain {
     
     func convertToUnit(value: Float, unitsRelations: [String: Float], sourceUnit: String, targetUnit: String, baseUnit: String) -> [String] {
         var newValue = value
-        let textFieldValue = value
         var results: [String] = []
         
+        // If the target unit is undefined => convert to all units
         if targetUnit == "?" {
             for unit in unitsRelations {
-                newValue = sourceUnit == baseUnit ? textFieldValue * unitsRelations[unit.key]! : (textFieldValue * (unitsRelations[unit.key]!/unitsRelations[sourceUnit]!))
-                newValue = round(newValue*1000)/1000
+                newValue = getResults(value, unitsRelations, sourceUnit, unit.key, baseUnit)
                 results.append("\(newValue) \(unit.key)")
             }
-        } else {
-            newValue = sourceUnit == baseUnit ? newValue * unitsRelations[targetUnit]! : (newValue * (unitsRelations[targetUnit]!/unitsRelations[sourceUnit]!))
-            newValue = round(newValue*1000)/1000
+        }
+        // Otherwise convert to the target unit
+        else {
+            newValue = getResults(value, unitsRelations, sourceUnit, targetUnit, baseUnit)
             results.append("\(newValue) \(targetUnit)")
         }
         
         return results
+    }
+    
+    func getResults(_ value: Float, _ unitsRelations: [String: Float], _ sourceUnit: String, _ targetUnit: String, _ baseUnit: String) -> Float {
+        var newValue = sourceUnit == baseUnit ? value * unitsRelations[targetUnit]! : (value * (unitsRelations[targetUnit]!/unitsRelations[sourceUnit]!))
+        newValue = round(newValue*1000000)/1000000
+        return newValue
     }
     
 //MARK: - Pro Unit
