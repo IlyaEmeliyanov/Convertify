@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="quS-ve-dby">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="quS-ve-dby">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -52,7 +52,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabBarItemIcon1" id="KtO-g0-vCg"/>
-                    <navigationItem key="navigationItem" title="Standard Features" id="J0d-Tf-XHW"/>
+                    <navigationItem key="navigationItem" title="Standard" id="J0d-Tf-XHW"/>
                     <connections>
                         <outlet property="collectionView" destination="UcI-Xq-T5k" id="ooS-mw-eFz"/>
                         <outlet property="navItem" destination="J0d-Tf-XHW" id="VFB-H6-H6h"/>
@@ -136,6 +136,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-jw-d3i">
                                                 <rect key="frame" x="30.333333333333332" y="0.0" width="51.333333333333343" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSp-P8-VXi" userLabel="LeftDropdownView">
@@ -177,6 +178,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAr-y3-4Se">
                                                 <rect key="frame" x="43.999999999999972" y="0.0" width="23.666666666666671" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHi-Pb-I9H" userLabel="RightDropdownView">
@@ -248,12 +250,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="njc-ab-Dv6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="njc-ab-Dv6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <color key="backgroundColor" name="TableViewColor"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rKu-q4-GdI">
                                 <rect key="frame" x="60" y="60" width="255" height="31"/>
-                                <color key="backgroundColor" name="LengthSecondaryColor"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.69803921570000005" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="t5S-Co-d6I"/>
                                 </constraints>
@@ -400,7 +403,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabBarItemIcon2" id="Xc4-gS-4BK"/>
-                    <navigationItem key="navigationItem" title="Pro Features" id="ybl-bL-WS2"/>
+                    <navigationItem key="navigationItem" title="Pro" id="ybl-bL-WS2"/>
                     <connections>
                         <outlet property="collectionView" destination="t0l-FY-27G" id="mEe-ds-Cg1"/>
                         <outlet property="navItem" destination="ybl-bL-WS2" id="i1h-DG-W3B"/>
@@ -465,6 +468,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fne-G7-e86">
                                                 <rect key="frame" x="30.333333333333332" y="0.0" width="51.333333333333343" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-UR-lSU" userLabel="LeftDropdownView">
@@ -506,6 +510,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xee-Cn-RsG">
                                                 <rect key="frame" x="43.999999999999972" y="0.0" width="23.666666666666671" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epM-aD-pTI" userLabel="RightDropdownView">
@@ -540,7 +545,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efJ-hP-kXJ"/>
-                        <color key="backgroundColor" name="LengthBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97651380300000001" green="0.99203437569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="efJ-hP-kXJ" firstAttribute="trailing" secondItem="YMo-xg-W1L" secondAttribute="trailing" id="0dV-5M-AdD"/>
                             <constraint firstItem="efJ-hP-kXJ" firstAttribute="trailing" secondItem="F72-Pk-Gne" secondAttribute="trailing" constant="20" id="4uz-Mk-r4T"/>
@@ -577,8 +582,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-ib-wNg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-ib-wNg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <color key="backgroundColor" name="TableViewColor"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sRt-SG-gQE">
                                 <rect key="frame" x="60" y="60" width="255" height="31"/>
@@ -728,7 +734,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabBarItemIcon3" id="pac-4B-zGV"/>
-                    <navigationItem key="navigationItem" title="Favourites" id="hVh-17-Blf"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="hVh-17-Blf"/>
                     <connections>
                         <outlet property="collectionView" destination="kAO-vC-dsl" id="vik-0C-88e"/>
                         <outlet property="navItem" destination="hVh-17-Blf" id="UT7-VC-P7S"/>
@@ -793,6 +799,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oym-yN-v24">
                                                 <rect key="frame" x="30.333333333333332" y="0.0" width="51.333333333333343" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QZ-nh-h3K" userLabel="LeftDropdownView">
@@ -834,6 +841,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-Yg-ze9">
                                                 <rect key="frame" x="43.999999999999972" y="0.0" width="23.666666666666671" height="26.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4l-hu-A5W" userLabel="RightDropdownView">
@@ -905,8 +913,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="N97-DC-nX9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N97-DC-nX9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <color key="backgroundColor" name="TableViewColor"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uYb-KS-vwd">
                                 <rect key="frame" x="60" y="60" width="255" height="31"/>
@@ -1016,7 +1025,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="375" height="812"/>
         <image name="TabBarItemIcon1" width="25" height="25"/>
         <image name="TabBarItemIcon2" width="39" height="17"/>
         <image name="TabBarItemIcon3" width="28" height="23"/>
@@ -1057,6 +1065,9 @@
         </namedColor>
         <namedColor name="TabBarBackground">
             <color red="0.16899999976158142" green="0.17299999296665192" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TableViewColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

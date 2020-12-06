@@ -12,4 +12,5 @@ struct Card {
     let label: String
     let image: UIImage
     let labelColor: UIColor
+    var isFavorite: Bool = false
 }

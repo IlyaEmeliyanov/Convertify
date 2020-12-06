@@ -11,16 +11,26 @@ import VisualEffectView
 
 class MyCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var itemView: UIView!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelView: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    
+    var card: Card?
+    var isFavorite: Bool = false
+    
+    let defaults = UserDefaults.standard
+    let key = "favorites"
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.layer.cornerRadius = 15.0
-        
-//        setupBackgroundBlur()
+
+        setupBackgroundBlur()
     }
     
     
@@ -28,6 +38,18 @@ class MyCollectionViewCell: UICollectionViewCell {
         // Configuring card appearence
         imageView.image = card.image
         labelView.text = card.label
+        labelView.textColor = card.labelColor
+        
+    }
+    
+    public func configFavoriteStyles() {
+        if isFavorite {
+            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            likeButton.tintColor =  UIColor(named: "IsLikedColor")
+        } else {
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            likeButton.tintColor = .white
+        }
     }
     
     static func nib() -> UINib {
@@ -35,16 +57,23 @@ class MyCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupBackgroundBlur() {
-//        let overlayColor = UIColor().fromHexToUIColor("4E4676")
-//        let visualEffectView = VisualEffectView(frame: self.bounds)
-//
-//        // Configure the view with tint color, blur radius, etc
-//        visualEffectView.colorTint = overlayColor
-//        visualEffectView.colorTintAlpha = 0.8
-//        visualEffectView.blurRadius = 5
-        
-//        This option is obsolete => iOS 14 does the insertionSubview auomatically
-//        self.insertSubview(visualEffectView, at: 0)
+        let blurEffect = UIBlurEffect(style: .regular)
+        let visualEffectVIew = UIVisualEffectView(effect: blurEffect)
+        visualEffectVIew.alpha = 0.2
+        visualEffectVIew.frame = itemView.bounds
+        itemView.addSubview(visualEffectVIew)
     }
+    
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        isFavorite = !isFavorite
+        
+        K.Favorites.setFavorites(labelView: labelView, isFavorite: isFavorite) // setting K.favoriteUnitLabels
+        configFavoriteStyles()
+        K.favoriteUnits = K.Favorites.getFavorites(favoriteUnitLabels: K.favoriteUnitLabels)
+        defaults.set(K.favoriteUnitLabels, forKey: key)
+        
+        print(K.favoriteUnitLabels)
+    }
+    
     
 }

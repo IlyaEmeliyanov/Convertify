@@ -72,6 +72,8 @@ class ConverterViewController: UIViewController {
             // Assign the label's text to 'item'
             self.sourceUnitLabel.text = item
             self.targetUnitLabel.text = "?"
+            
+            print(item)
         }
     }
     
@@ -88,6 +90,8 @@ class ConverterViewController: UIViewController {
         rightMenu.selectionAction = { [unowned self] (index: Int, item: String) in
             // Assign the label's text to item
             self.targetUnitLabel.text = item
+            
+            print(item)
         }
     }
     
@@ -110,7 +114,7 @@ class ConverterViewController: UIViewController {
             }
             // If unit is not standard => then try the pro convertion algorithm by initializing a proUnit
             else {
-                if let results = calculatePro(safeUnit, textFieldValue, sourceUnit, targetUnit) {
+                if let _ = calculatePro(safeUnit, textFieldValue, sourceUnit, targetUnit) {
                     print("'results' is not nil")
                     self.performSegue(withIdentifier: K.segueIdToResult, sender: self)
                 }
@@ -140,7 +144,6 @@ class ConverterViewController: UIViewController {
         switch proUnit.unitLabel {
         case K.proUnitLabels[0]:
             results = converterBrain.colorsConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit)
-            print(results)
         case K.proUnitLabels[1]:
             results = converterBrain.binaryConvert(textFieldValue: textFieldValue, sourceUnit: sourceUnit, targetUnit: targetUnit ?? "?")
         case K.proUnitLabels[2]:

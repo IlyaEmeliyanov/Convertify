@@ -11,10 +11,12 @@ import UIKit
 class Unit {
     let unitLabel: String
     var dropdownData: [String]?
+    let card: Card
     
-    init(measureLabel: String, dropdownData: [String]) {
-        self.unitLabel = measureLabel
+    init(unitLabel: String, dropdownData: [String], card: Card) {
+        self.unitLabel = unitLabel
         self.dropdownData = dropdownData
+        self.card = card
     }
     
 }
@@ -22,9 +24,9 @@ class Unit {
 class StandardUnit: Unit {
     var unitsRelations: [String: Float]
     
-    init(measureLabel: String, dropdownData: [String], unitsRelations: [String: Float]) {
+    init(unitLabel: String, dropdownData: [String], unitsRelations: [String: Float], card: Card) {
         self.unitsRelations = unitsRelations
-        super.init(measureLabel: measureLabel, dropdownData: dropdownData)
+        super.init(unitLabel: unitLabel, dropdownData: dropdownData, card: card)
     }
 }
 

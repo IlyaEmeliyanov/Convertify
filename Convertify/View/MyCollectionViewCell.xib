@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -15,45 +18,98 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="Unit_Converter" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="Convertify" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SD-dF-dsf">
-                        <rect key="frame" x="0.0" y="104" width="140" height="66"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeO-Ht-Xem">
-                        <rect key="frame" x="0.0" y="-1" width="140" height="105"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c91-KH-OkL" userLabel="ItemView">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klz-YX-cUF">
-                                <rect key="frame" x="38" y="20" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5l-Ik-ixi" userLabel="BackgroundView">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="170"/>
+                                <color key="backgroundColor" name="TableCellBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-iJ-9Ku">
+                                <rect key="frame" x="90" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DGZ-fZ-sWS"/>
+                                    <constraint firstAttribute="height" constant="40" id="Zff-kd-WUi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="heart" catalog="system">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="likeButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eer-DK-OhI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SD-dF-dsf">
+                                <rect key="frame" x="15" y="70" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some kind of description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-f6-psN">
+                                <rect key="frame" x="15" y="100" width="110" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.97651380300000001" green="0.99203437569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rk7-bg-BIj">
+                                <rect key="frame" x="15" y="15" width="48" height="40"/>
+                                <color key="tintColor" red="0.97651380300000001" green="0.99203437569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2l0-Bg-eXs"/>
+                                    <constraint firstAttribute="width" constant="48" id="7hm-Oh-Axl"/>
+                                </constraints>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="rk7-bg-BIj" firstAttribute="top" secondItem="c91-KH-OkL" secondAttribute="top" constant="15" id="5dY-4N-0kG"/>
+                            <constraint firstItem="m5l-Ik-ixi" firstAttribute="leading" secondItem="c91-KH-OkL" secondAttribute="leading" id="856-KG-byc"/>
+                            <constraint firstItem="YNy-f6-psN" firstAttribute="top" secondItem="7SD-dF-dsf" secondAttribute="bottom" constant="10" id="AUc-Ig-JTK"/>
+                            <constraint firstItem="m5l-Ik-ixi" firstAttribute="top" secondItem="c91-KH-OkL" secondAttribute="top" id="Blg-Pl-8NV"/>
+                            <constraint firstItem="RpF-iJ-9Ku" firstAttribute="top" secondItem="c91-KH-OkL" secondAttribute="top" constant="10" id="RZi-hL-PuR"/>
+                            <constraint firstAttribute="trailing" secondItem="RpF-iJ-9Ku" secondAttribute="trailing" constant="10" id="X6R-SF-i3d"/>
+                            <constraint firstItem="7SD-dF-dsf" firstAttribute="top" secondItem="rk7-bg-BIj" secondAttribute="bottom" constant="15" id="ZPn-kA-NKB"/>
+                            <constraint firstItem="7SD-dF-dsf" firstAttribute="leading" secondItem="c91-KH-OkL" secondAttribute="leading" constant="15" id="fHG-SP-hbE"/>
+                            <constraint firstItem="rk7-bg-BIj" firstAttribute="leading" secondItem="c91-KH-OkL" secondAttribute="leading" constant="15" id="gTx-VO-blQ"/>
+                            <constraint firstAttribute="trailing" secondItem="7SD-dF-dsf" secondAttribute="trailing" constant="15" id="jHo-6y-kIc"/>
+                            <constraint firstAttribute="trailing" secondItem="YNy-f6-psN" secondAttribute="trailing" constant="15" id="lpd-Mk-KZm"/>
+                            <constraint firstAttribute="trailing" secondItem="m5l-Ik-ixi" secondAttribute="trailing" id="mvE-Zl-XN6"/>
+                            <constraint firstItem="YNy-f6-psN" firstAttribute="leading" secondItem="c91-KH-OkL" secondAttribute="leading" constant="15" id="vTU-2b-Oc6"/>
+                            <constraint firstAttribute="bottom" secondItem="m5l-Ik-ixi" secondAttribute="bottom" id="ye2-Ys-rds"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" name="CardBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="c91-KH-OkL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dvk-fM-Y3e"/>
+                <constraint firstItem="c91-KH-OkL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ycz-i2-SB0"/>
+                <constraint firstAttribute="bottom" secondItem="c91-KH-OkL" secondAttribute="bottom" id="gI5-Jr-Mww"/>
+                <constraint firstAttribute="trailing" secondItem="c91-KH-OkL" secondAttribute="trailing" id="hiy-mj-fUE"/>
+            </constraints>
             <size key="customSize" width="180" height="190"/>
             <connections>
-                <outlet property="imageView" destination="klz-YX-cUF" id="BMh-gp-sTX"/>
+                <outlet property="imageView" destination="rk7-bg-BIj" id="cPT-Hs-eev"/>
+                <outlet property="itemView" destination="m5l-Ik-ixi" id="wCe-Y3-swy"/>
                 <outlet property="labelView" destination="7SD-dF-dsf" id="Dt0-wH-f5w"/>
+                <outlet property="likeButton" destination="RpF-iJ-9Ku" id="IwA-J3-43g"/>
             </connections>
             <point key="canvasLocation" x="240.57971014492756" y="70.3125"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="CardBackgroundColor">
-            <color red="0.30500000715255737" green="0.27399998903274536" blue="0.460999995470047" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="displayP3"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <namedColor name="TableCellBackgroundColor">
+            <color red="0.25499999523162842" green="0.32199999690055847" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
